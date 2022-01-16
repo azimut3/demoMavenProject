@@ -1,6 +1,5 @@
 package com.mycompany.mavenproject3;
 
-//import com.example.demoanylogichibrid.dataModel.Iteration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
@@ -41,8 +40,10 @@ public class IterationCallable implements Callable<IterationStats>, Serializable
         //iterationString.add(dataCombination);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        Files.writeString(configRanFile, objectMapper.writeValueAsString(iteration) + System.lineSeparator(), 
-                StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        Files.writeString(configRanFile,
+                objectMapper.writeValueAsString(iteration) + System.lineSeparator(),
+                StandardOpenOption.CREATE,
+                StandardOpenOption.APPEND);
         Files.writeString(statsFile,
                 iteration.toForeignKey() + ";" + dataCombination.toString() + System.lineSeparator(),
                 StandardOpenOption.CREATE,

@@ -1,60 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <groupId>com.mycompany</groupId>
     <artifactId>mavenproject3</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+
+    <repositories>
+        <repository>
+            <id>local-maven-repo</id>
+            <url>file:///${project.basedir}/local-maven-repo</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <java.version>16</java.version>
+    </properties>
+
     <dependencies>
         <dependency>
-            <groupId>anyvalue</groupId>
+            <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <optional>true</optional>
         </dependency>
+
         <dependency>
-            <groupId>model</groupId>
-            <artifactId>model</artifactId>
+            <groupId>com.anylogic.custom-model</groupId>
+            <artifactId>al3d</artifactId>
             <version>1</version>
         </dependency>
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.13.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.xj.anylogic.engine.al3d</groupId>
-            <artifactId>com.xj.anylogic.engine.al3d</artifactId>
+            <groupId>com.anylogic.custom-model</groupId>
+            <artifactId>engine</artifactId>
             <version>1</version>
         </dependency>
         <dependency>
-            <groupId>com.xj.anylogic.engine</groupId>
-            <artifactId>com.xj.anylogic.engine</artifactId>
+            <groupId>com.anylogic.custom-model</groupId>
+            <artifactId>engine.nl</artifactId>
             <version>1</version>
         </dependency>
         <dependency>
-            <groupId>com.xj.anylogic.engine.nl</groupId>
-            <artifactId>com.xj.anylogic.engine.nl</artifactId>
+            <groupId>com.anylogic.custom-model</groupId>
+            <artifactId>engine.sa</artifactId>
             <version>1</version>
         </dependency>
         <dependency>
-            <groupId>com.xj.anylogic.engine.sa</groupId>
-            <artifactId>com.xj.anylogic.engine.sa</artifactId>
+            <groupId>com.anylogic.custom-model</groupId>
+            <artifactId>process-modeling-library</artifactId>
             <version>1</version>
         </dependency>
+        <dependency>
+            <groupId>com.anylogic.custom-model</groupId>
+            <artifactId>rail-library</artifactId>
+            <version>1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.eiei.custom-model</groupId>
+            <artifactId>grain-model</artifactId>
+            <version>1.7</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-            <version>2.0.5.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>1.5.6.RELEASE</version>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${project.parent.version}</version>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

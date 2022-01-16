@@ -1,9 +1,6 @@
 package com.mycompany.mavenproject3;
 
-//import com.example.demoanylogichibrid.dataModel.Iteration;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.SneakyThrows;
-import modelVessel.CustomExperiment;
 import modelVessel.IterationStats;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,13 +8,10 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -125,9 +119,5 @@ public class DemoAnylogicHibridApplication {
 
         return executedIterations;
     }
-
-
-
-
 
 }

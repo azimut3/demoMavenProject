@@ -35,9 +35,22 @@ ENV/
 logs/*.log
 *.log
 
-# Results (optional - uncomment if you don't want to track results)
-# results/
-# results/pareto_analysis/
+# Results and Optimization Output
+results/
+optimization_results/
+optimization_results/pareto_analysis/
+# Optimization result files
+optimization_results/*.json
+optimization_results/*.csv
+optimization_results/pareto_analysis/*.png
+optimization_results/pareto_analysis/*.html
+optimization_results/pareto_analysis/*.csv
+optimization_results/pareto_analysis/*.json
+
+# Additional optimization files
+pareto_solutions_with_ids.csv
+pareto_solutions.csv
+executedIterations.txt
 
 # Java
 target/

@@ -40,15 +40,17 @@ class ParetoAnalyzer:
             return {}
     
     def extract_pareto_data(self, results: Dict) -> pd.DataFrame:
-        """Extract Pareto front data into a DataFrame"""
+        """Extract Pareto front data into a DataFrame with IDs"""
         pareto_data = []
         
         for solution in results.get("pareto_front", []):
             params = solution["parameters"]
             fitness = solution["fitness"]
+            solution_id = solution.get("id", "UNKNOWN")
             
             if fitness:
                 row = {
+                    "id": solution_id,
                     **params,
                     "vesselsHandledQtt": fitness[0],
                     "primeCost": fitness[1],
@@ -131,7 +133,8 @@ class ParetoAnalyzer:
             mode='markers',
             name='All Solutions',
             marker=dict(color='lightblue', size=8, opacity=0.6),
-            hovertemplate=f'{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<extra></extra>'
+            hovertemplate=f'ID: %{{customdata}}<br>{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<extra></extra>',
+            customdata=df.get('id', ['N/A'] * len(df))
         ))
         
         # Pareto frontier
@@ -146,7 +149,8 @@ class ParetoAnalyzer:
                 name='Pareto Frontier',
                 line=dict(color='red', width=3),
                 marker=dict(color='red', size=10),
-                hovertemplate=f'{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<extra></extra>'
+                hovertemplate=f'ID: %{{customdata}}<br>{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<extra></extra>',
+                customdata=pareto_df_sorted.get('id', ['N/A'] * len(pareto_df_sorted))
             ))
         
         fig.update_layout(
@@ -156,6 +160,86 @@ class ParetoAnalyzer:
             template='plotly_white',
             width=800,
             height=600
+        )
+        
+        if save_path:
+            fig.write_html(save_path)
+            fig.write_image(save_path.replace('.html', '.png'))
+        
+        return fig
+    
+    def plot_2d_pareto_frontier_with_labels(self, df: pd.DataFrame, 
+                                           x_obj: str = "primeCost",
+                                           y_obj: str = "profit",
+                                           title: str = "Pareto Frontier with Solution IDs",
+                                           save_path: str = None) -> go.Figure:
+        """
+        Create 2D Pareto frontier plot with solution ID labels
+        
+        Args:
+            df: DataFrame with solutions and IDs
+            x_obj: X-axis objective
+            y_obj: Y-axis objective
+            title: Plot title
+            save_path: Path to save the plot
+            
+        Returns:
+            Plotly figure object
+        """
+        # Identify Pareto frontier
+        pareto_df = self.identify_pareto_frontier(df, [x_obj, y_obj])
+        
+        # Create scatter plot
+        fig = go.Figure()
+        
+        # All solutions
+        fig.add_trace(go.Scatter(
+            x=df[x_obj],
+            y=df[y_obj],
+            mode='markers',
+            name='All Solutions',
+            marker=dict(color='lightblue', size=8, opacity=0.6),
+            hovertemplate=f'ID: %{{customdata}}<br>{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<extra></extra>',
+            customdata=df.get('id', ['N/A'] * len(df))
+        ))
+        
+        # Pareto frontier with labels
+        if len(pareto_df) > 0:
+            # Sort by x_obj for proper line connection
+            pareto_df_sorted = pareto_df.sort_values(x_obj)
+            
+            # Pareto frontier line
+            fig.add_trace(go.Scatter(
+                x=pareto_df_sorted[x_obj],
+                y=pareto_df_sorted[y_obj],
+                mode='lines+markers',
+                name='Pareto Frontier',
+                line=dict(color='red', width=3),
+                marker=dict(color='red', size=10),
+                hovertemplate=f'ID: %{{customdata}}<br>{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<extra></extra>',
+                customdata=pareto_df_sorted.get('id', ['N/A'] * len(pareto_df_sorted))
+            ))
+            
+            # Add text labels for Pareto solutions
+            fig.add_trace(go.Scatter(
+                x=pareto_df_sorted[x_obj],
+                y=pareto_df_sorted[y_obj],
+                mode='text',
+                text=pareto_df_sorted.get('id', ['N/A'] * len(pareto_df_sorted)),
+                textposition='top center',
+                name='Solution IDs',
+                textfont=dict(size=10, color='darkred'),
+                showlegend=False,
+                hovertemplate='<extra></extra>'
+            ))
+        
+        fig.update_layout(
+            title=title,
+            xaxis_title=x_obj,
+            yaxis_title=y_obj,
+            template='plotly_white',
+            width=1000,
+            height=700
         )
         
         if save_path:
@@ -185,7 +269,8 @@ class ParetoAnalyzer:
             mode='markers',
             name='All Solutions',
             marker=dict(color='lightblue', size=5, opacity=0.6),
-            hovertemplate=f'{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<br>{z_obj}: %{{z}}<extra></extra>'
+            hovertemplate=f'ID: %{{customdata}}<br>{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<br>{z_obj}: %{{z}}<extra></extra>',
+            customdata=df.get('id', ['N/A'] * len(df))
         ))
         
         # Pareto frontier
@@ -197,7 +282,8 @@ class ParetoAnalyzer:
                 mode='markers',
                 name='Pareto Frontier',
                 marker=dict(color='red', size=8),
-                hovertemplate=f'{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<br>{z_obj}: %{{z}}<extra></extra>'
+                hovertemplate=f'ID: %{{customdata}}<br>{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<br>{z_obj}: %{{z}}<extra></extra>',
+                customdata=pareto_df.get('id', ['N/A'] * len(pareto_df))
             ))
         
         fig.update_layout(
@@ -378,6 +464,13 @@ class ParetoAnalyzer:
                 f"{output_dir}/pareto_2d_{x_obj}_vs_{y_obj}.html"
             )
             plots[f"2d_{x_obj}_vs_{y_obj}"] = fig
+        
+        # Add labeled Pareto frontier plot (most important one)
+        fig_labeled = self.plot_2d_pareto_frontier_with_labels(
+            df, "primeCost", "profit", "Pareto Frontier with Solution IDs",
+            f"{output_dir}/pareto_frontier_with_ids.html"
+        )
+        plots["labeled_pareto"] = fig_labeled
         
         # 3D Pareto frontier
         fig_3d = self.plot_3d_pareto_frontier(

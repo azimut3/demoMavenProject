@@ -6,6 +6,7 @@ import logging
 from tqdm import tqdm
 import json
 import os
+from datetime import datetime
 
 class GeneticOptimizer:
     """
@@ -25,6 +26,11 @@ class GeneticOptimizer:
         self.mutation_rate = mutation_rate
         self.crossover_rate = crossover_rate
         self.logger = logging.getLogger(__name__)
+        
+        # ID tracking system
+        self.solution_counter = 0
+        self.solution_ids = {}  # Maps solution hash to ID
+        self.solution_history = []  # Track all solutions with IDs
         
         # Parameter bounds - very conservative based on observed working values
         self.parameter_bounds = {
@@ -141,8 +147,11 @@ class GeneticOptimizer:
                 results.get("timeAtTerminal", float('inf'))
             ]
             
-            # Log successful evaluation
-            self.logger.debug(f"Successful evaluation: vessels={kpis[0]}, cost={kpis[1]}, profit={kpis[3]}")
+            # Generate unique ID for this solution
+            solution_id = self._get_or_create_solution_id(parameters, kpis)
+            
+            # Log successful evaluation with ID
+            self.logger.debug(f"Solution {solution_id}: vessels={kpis[0]}, cost={kpis[1]}, profit={kpis[3]}")
             
             return tuple(kpis)
             
@@ -150,6 +159,28 @@ class GeneticOptimizer:
             self.logger.error(f"Error evaluating individual with parameters {parameters}: {e}")
             # Return worst possible values if simulation fails
             return (-float('inf'), float('inf'), float('inf'), -float('inf'), float('inf'))
+    
+    def _get_or_create_solution_id(self, parameters: Dict[str, int], kpis: List[float]) -> str:
+        """Generate or retrieve unique ID for a solution"""
+        # Create a hash of the parameters to identify unique solutions
+        param_hash = hash(tuple(sorted(parameters.items())))
+        
+        if param_hash not in self.solution_ids:
+            self.solution_counter += 1
+            solution_id = f"SOL_{self.solution_counter:06d}"
+            self.solution_ids[param_hash] = solution_id
+            
+            # Store solution in history
+            solution_record = {
+                "id": solution_id,
+                "parameters": parameters.copy(),
+                "kpis": kpis.copy(),
+                "timestamp": datetime.now().isoformat(),
+                "generation": None  # Will be set during optimization
+            }
+            self.solution_history.append(solution_record)
+            
+        return self.solution_ids[param_hash]
     
     def _mutate_individual(self, individual):
         """Custom mutation operator that respects parameter bounds"""
@@ -194,26 +225,43 @@ class GeneticOptimizer:
         return pop, list(hof)
     
     def save_results(self, population: List, pareto_front: List, filename: str = "optimization_results.json"):
-        """Save optimization results to file"""
+        """Save optimization results to file with ID tracking"""
         results = {
             "population": [],
             "pareto_front": [],
+            "solution_history": self.solution_history,
             "parameter_bounds": self.parameter_bounds,
-            "objectives": self.objectives
+            "objectives": self.objectives,
+            "optimization_metadata": {
+                "total_solutions_evaluated": self.solution_counter,
+                "unique_solutions": len(self.solution_ids),
+                "population_size": self.population_size,
+                "generations": self.generations,
+                "mutation_rate": self.mutation_rate,
+                "crossover_rate": self.crossover_rate
+            }
         }
         
-        # Save population
+        # Save population with IDs
         for individual in population:
             params = self._individual_to_parameters(individual)
+            param_hash = hash(tuple(sorted(params.items())))
+            solution_id = self.solution_ids.get(param_hash, "UNKNOWN")
+            
             results["population"].append({
+                "id": solution_id,
                 "parameters": params,
                 "fitness": individual.fitness.values if individual.fitness.valid else None
             })
         
-        # Save Pareto front
+        # Save Pareto front with IDs
         for individual in pareto_front:
             params = self._individual_to_parameters(individual)
+            param_hash = hash(tuple(sorted(params.items())))
+            solution_id = self.solution_ids.get(param_hash, "UNKNOWN")
+            
             results["pareto_front"].append({
+                "id": solution_id,
                 "parameters": params,
                 "fitness": individual.fitness.values if individual.fitness.valid else None
             })
@@ -222,9 +270,12 @@ class GeneticOptimizer:
             json.dump(results, f, indent=2)
         
         self.logger.info(f"Results saved to {filename}")
+        self.logger.info(f"Total solutions evaluated: {self.solution_counter}")
+        self.logger.info(f"Unique solutions: {len(self.solution_ids)}")
+        self.logger.info(f"Pareto front size: {len(pareto_front)}")
     
     def get_best_solutions(self, pareto_front: List, n: int = 5) -> List[Dict]:
-        """Get the best solutions from Pareto front"""
+        """Get the best solutions from Pareto front with IDs"""
         if not pareto_front:
             return []
         
@@ -237,25 +288,40 @@ class GeneticOptimizer:
         
         # Add best by profit
         if sorted_by_profit:
+            params = self._individual_to_parameters(sorted_by_profit[0])
+            param_hash = hash(tuple(sorted(params.items())))
+            solution_id = self.solution_ids.get(param_hash, "UNKNOWN")
+            
             best_solutions.append({
+                "id": solution_id,
                 "criterion": "Best Profit",
-                "parameters": self._individual_to_parameters(sorted_by_profit[0]),
+                "parameters": params,
                 "fitness": sorted_by_profit[0].fitness.values
             })
         
         # Add best by vessels handled
         if sorted_by_vessels:
+            params = self._individual_to_parameters(sorted_by_vessels[0])
+            param_hash = hash(tuple(sorted(params.items())))
+            solution_id = self.solution_ids.get(param_hash, "UNKNOWN")
+            
             best_solutions.append({
+                "id": solution_id,
                 "criterion": "Most Vessels Handled",
-                "parameters": self._individual_to_parameters(sorted_by_vessels[0]),
+                "parameters": params,
                 "fitness": sorted_by_vessels[0].fitness.values
             })
         
         # Add best by cost
         if sorted_by_cost:
+            params = self._individual_to_parameters(sorted_by_cost[0])
+            param_hash = hash(tuple(sorted(params.items())))
+            solution_id = self.solution_ids.get(param_hash, "UNKNOWN")
+            
             best_solutions.append({
+                "id": solution_id,
                 "criterion": "Lowest Cost",
-                "parameters": self._individual_to_parameters(sorted_by_cost[0]),
+                "parameters": params,
                 "fitness": sorted_by_cost[0].fitness.values
             })
         

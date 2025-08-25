@@ -1,0 +1,289 @@
+2025-08-25 23:11:19,315 - __main__ - INFO - Starting AnyLogic Model Optimization
+2025-08-25 23:11:19,316 - __main__ - INFO - Arguments: {'java_app_path': None, 'java_url': 'http://localhost:8080', 'population_size': 5, 'generations': 3, 'mutation_rate': 0.1, 'crossover_rate': 0.7, 'timeout': 300, 'output_dir': 'optimization_results', 'analysis_only': False, 'results_file': None, 'log_level': 'INFO', 'no_auto_start': True}
+2025-08-25 23:11:19,316 - __main__ - INFO - Skipping Java application startup (--no-auto-start flag used)
+2025-08-25 23:11:19,316 - __main__ - INFO - Make sure the Java application is running at: http://localhost:8080
+2025-08-25 23:11:19,323 - __main__ - INFO - Java application is running and accessible
+2025-08-25 23:11:19,324 - __main__ - INFO - Starting genetic algorithm optimization...
+2025-08-25 23:11:19,324 - __main__ - INFO - Population size: 5
+2025-08-25 23:11:19,324 - __main__ - INFO - Generations: 3
+2025-08-25 23:11:19,325 - __main__ - INFO - Mutation rate: 0.1
+2025-08-25 23:11:19,325 - __main__ - INFO - Crossover rate: 0.7
+2025-08-25 23:11:19,325 - python.genetic_optimizer - INFO - Starting genetic algorithm optimization...
+2025-08-25 23:13:34,958 - python.genetic_optimizer - INFO - Optimization completed!
+2025-08-25 23:13:34,959 - __main__ - INFO - Optimization completed!
+2025-08-25 23:13:34,959 - __main__ - INFO - Final population size: 5
+2025-08-25 23:13:34,959 - __main__ - INFO - Pareto front size: 11
+2025-08-25 23:13:34,961 - python.genetic_optimizer - INFO - Results saved to optimization_results/optimization_results.json
+2025-08-25 23:13:34,961 - python.genetic_optimizer - INFO - Total solutions evaluated: 15
+2025-08-25 23:13:34,961 - python.genetic_optimizer - INFO - Unique solutions: 15
+2025-08-25 23:13:34,962 - python.genetic_optimizer - INFO - Pareto front size: 11
+2025-08-25 23:13:34,962 - __main__ - INFO - Best solutions:
+2025-08-25 23:13:34,962 - __main__ - INFO -   Best Profit: {'varOfWork': 3, 'capacityOfMainConveyor': 990, 'quantityOfVagonsToSilageAtOnce': 9, 'quantityOfVehicleDischargeStations': 2, 'numberOfVehicleSilages': 4, 'capacityOfVehicleSilages': 932, 'quantityOfSilages': 19, 'yearsModelWorking': 1}
+2025-08-25 23:13:34,962 - __main__ - INFO -     Fitness: (112.0, 348.9, 50.23153544120582, 714582591.85, 14.011914088281571)
+2025-08-25 23:13:34,963 - __main__ - INFO -   Most Vessels Handled: {'varOfWork': 3, 'capacityOfMainConveyor': 990, 'quantityOfVagonsToSilageAtOnce': 9, 'quantityOfVehicleDischargeStations': 2, 'numberOfVehicleSilages': 4, 'capacityOfVehicleSilages': 932, 'quantityOfSilages': 19, 'yearsModelWorking': 1}
+2025-08-25 23:13:34,963 - __main__ - INFO -     Fitness: (112.0, 348.9, 50.23153544120582, 714582591.85, 14.011914088281571)
+2025-08-25 23:13:34,963 - __main__ - INFO -   Lowest Cost: {'varOfWork': 3, 'capacityOfMainConveyor': 990, 'quantityOfVagonsToSilageAtOnce': 9, 'quantityOfVehicleDischargeStations': 2, 'numberOfVehicleSilages': 4, 'capacityOfVehicleSilages': 932, 'quantityOfSilages': 19, 'yearsModelWorking': 1}
+2025-08-25 23:13:34,963 - __main__ - INFO -     Fitness: (112.0, 348.9, 50.23153544120582, 714582591.85, 14.011914088281571)
+2025-08-25 23:13:34,964 - __main__ - INFO - Running Pareto analysis...
+2025-08-25 23:13:35,312 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-25 23:13:35,313 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2025-08-25 23:13:35,314 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmpbea49p8f.
+2025-08-25 23:13:35,315 - choreographer.browser_async - INFO - Opening browser.
+2025-08-25 23:13:35,318 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmp8_mlznmd.
+2025-08-25 23:13:35,318 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\tmfpr\AppData\Local\Temp\tmp8_mlznmd
+2025-08-25 23:13:35,619 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/tmfpr/AppData/Local/Temp/tmpbea49p8f/index.html
+2025-08-25 23:13:35,622 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-25 23:13:36,364 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-25 23:13:36,369 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-25 23:13:36,370 - kaleido.kaleido - INFO - Got 2AC6
+2025-08-25 23:13:36,371 - kaleido._kaleido_tab - INFO - Processing Cost_vs_Profit.png
+2025-08-25 23:13:36,380 - kaleido._kaleido_tab - INFO - Sending big command for Cost_vs_Profit.png.
+2025-08-25 23:13:36,482 - kaleido._kaleido_tab - INFO - Sent big command for Cost_vs_Profit.png.
+2025-08-25 23:13:36,482 - kaleido.kaleido - INFO - Reloading tab 2AC6 before return.
+2025-08-25 23:13:37,088 - kaleido.kaleido - INFO - Putting tab 2AC6 back (queue size: 0).
+2025-08-25 23:13:37,088 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-25 23:13:37,088 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-25 23:13:37,089 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:37,089 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:37,089 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:37,089 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:37,090 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:37,091 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:37,091 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:37,091 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:37,092 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:37,092 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:37,345 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:37,345 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:37,359 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:37,360 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:37,408 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-25 23:13:37,409 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2025-08-25 23:13:37,409 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmph9h1w0lj.
+2025-08-25 23:13:37,410 - choreographer.browser_async - INFO - Opening browser.
+2025-08-25 23:13:37,411 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmpzj781mih.
+2025-08-25 23:13:37,411 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\tmfpr\AppData\Local\Temp\tmpzj781mih
+2025-08-25 23:13:37,714 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/tmfpr/AppData/Local/Temp/tmph9h1w0lj/index.html
+2025-08-25 23:13:37,715 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-25 23:13:38,914 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-25 23:13:38,915 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-25 23:13:38,915 - kaleido.kaleido - INFO - Got DBFB
+2025-08-25 23:13:38,915 - kaleido._kaleido_tab - INFO - Processing Handling_Time_vs_Profit.png
+2025-08-25 23:13:38,915 - kaleido._kaleido_tab - INFO - Sending big command for Handling_Time_vs_Profit.png.
+2025-08-25 23:13:39,004 - kaleido._kaleido_tab - INFO - Sent big command for Handling_Time_vs_Profit.png.
+2025-08-25 23:13:39,005 - kaleido.kaleido - INFO - Reloading tab DBFB before return.
+2025-08-25 23:13:39,131 - kaleido.kaleido - INFO - Putting tab DBFB back (queue size: 0).
+2025-08-25 23:13:39,131 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-25 23:13:39,132 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-25 23:13:39,132 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:39,133 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:39,133 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:39,133 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:39,133 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:39,136 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:39,137 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:39,138 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:39,138 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:39,138 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:39,577 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:39,577 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:39,591 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:39,591 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:39,638 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-25 23:13:39,639 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2025-08-25 23:13:39,640 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmpccwjad49.
+2025-08-25 23:13:39,640 - choreographer.browser_async - INFO - Opening browser.
+2025-08-25 23:13:39,642 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmpug0ct_yg.
+2025-08-25 23:13:39,642 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\tmfpr\AppData\Local\Temp\tmpug0ct_yg
+2025-08-25 23:13:39,949 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/tmfpr/AppData/Local/Temp/tmpccwjad49/index.html
+2025-08-25 23:13:39,950 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-25 23:13:41,152 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-25 23:13:41,153 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-25 23:13:41,153 - kaleido.kaleido - INFO - Got 20CC
+2025-08-25 23:13:41,154 - kaleido._kaleido_tab - INFO - Processing Terminal_Time_vs_Vessels_Handled.png
+2025-08-25 23:13:41,154 - kaleido._kaleido_tab - INFO - Sending big command for Terminal_Time_vs_Vessels_Handled.png.
+2025-08-25 23:13:41,245 - kaleido._kaleido_tab - INFO - Sent big command for Terminal_Time_vs_Vessels_Handled.png.
+2025-08-25 23:13:41,245 - kaleido.kaleido - INFO - Reloading tab 20CC before return.
+2025-08-25 23:13:41,377 - kaleido.kaleido - INFO - Putting tab 20CC back (queue size: 0).
+2025-08-25 23:13:41,377 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-25 23:13:41,377 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-25 23:13:41,378 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:41,378 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:41,378 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:41,378 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:41,379 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:41,381 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:41,382 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:41,382 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:41,382 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:41,383 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:41,746 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:41,747 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:41,758 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:41,758 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:41,803 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-25 23:13:41,804 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2025-08-25 23:13:41,805 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmp3n_rs1f0.
+2025-08-25 23:13:41,806 - choreographer.browser_async - INFO - Opening browser.
+2025-08-25 23:13:41,807 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmp_qpbzafy.
+2025-08-25 23:13:41,807 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\tmfpr\AppData\Local\Temp\tmp_qpbzafy
+2025-08-25 23:13:42,154 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/tmfpr/AppData/Local/Temp/tmp3n_rs1f0/index.html
+2025-08-25 23:13:42,160 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-25 23:13:42,931 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-25 23:13:42,932 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-25 23:13:42,932 - kaleido.kaleido - INFO - Got 304C
+2025-08-25 23:13:42,932 - kaleido._kaleido_tab - INFO - Processing Cost_vs_Vessels_Handled.png
+2025-08-25 23:13:42,932 - kaleido._kaleido_tab - INFO - Sending big command for Cost_vs_Vessels_Handled.png.
+2025-08-25 23:13:43,030 - kaleido._kaleido_tab - INFO - Sent big command for Cost_vs_Vessels_Handled.png.
+2025-08-25 23:13:43,031 - kaleido.kaleido - INFO - Reloading tab 304C before return.
+2025-08-25 23:13:43,657 - kaleido.kaleido - INFO - Putting tab 304C back (queue size: 0).
+2025-08-25 23:13:43,658 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-25 23:13:43,658 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-25 23:13:43,658 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:43,659 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:43,659 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:43,659 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:43,659 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:43,660 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:43,661 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:43,661 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:43,661 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:43,661 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:43,863 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:43,863 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:43,877 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:43,878 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:43,922 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-25 23:13:43,923 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2025-08-25 23:13:43,923 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmp_ea_9lxf.
+2025-08-25 23:13:43,924 - choreographer.browser_async - INFO - Opening browser.
+2025-08-25 23:13:43,925 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmpikzgd7hs.
+2025-08-25 23:13:43,925 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\tmfpr\AppData\Local\Temp\tmpikzgd7hs
+2025-08-25 23:13:44,232 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/tmfpr/AppData/Local/Temp/tmp_ea_9lxf/index.html
+2025-08-25 23:13:44,233 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-25 23:13:45,447 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-25 23:13:45,447 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-25 23:13:45,448 - kaleido.kaleido - INFO - Got 5D64
+2025-08-25 23:13:45,448 - kaleido._kaleido_tab - INFO - Processing Pareto_Frontier_with_Solution_IDs.png
+2025-08-25 23:13:45,448 - kaleido._kaleido_tab - INFO - Sending big command for Pareto_Frontier_with_Solution_IDs.png.
+2025-08-25 23:13:45,540 - kaleido._kaleido_tab - INFO - Sent big command for Pareto_Frontier_with_Solution_IDs.png.
+2025-08-25 23:13:45,540 - kaleido.kaleido - INFO - Reloading tab 5D64 before return.
+2025-08-25 23:13:45,664 - kaleido.kaleido - INFO - Putting tab 5D64 back (queue size: 0).
+2025-08-25 23:13:45,665 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-25 23:13:45,665 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-25 23:13:45,666 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:45,666 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:45,666 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:45,666 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:45,666 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:45,669 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:45,670 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:45,670 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:45,670 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:45,671 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:45,968 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:45,969 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:45,988 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:45,988 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:46,029 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-25 23:13:46,030 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2025-08-25 23:13:46,030 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmpe7srp7vp.
+2025-08-25 23:13:46,031 - choreographer.browser_async - INFO - Opening browser.
+2025-08-25 23:13:46,032 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmpqfj21sh1.
+2025-08-25 23:13:46,032 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\tmfpr\AppData\Local\Temp\tmpqfj21sh1
+2025-08-25 23:13:46,362 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/tmfpr/AppData/Local/Temp/tmpe7srp7vp/index.html
+2025-08-25 23:13:46,364 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-25 23:13:47,676 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-25 23:13:47,677 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-25 23:13:47,677 - kaleido.kaleido - INFO - Got D704
+2025-08-25 23:13:47,677 - kaleido._kaleido_tab - INFO - Processing 3D_Pareto_Frontier_Cost_vs_Profit_vs_Vessels_Handled.png
+2025-08-25 23:13:47,678 - kaleido._kaleido_tab - INFO - Sending big command for 3D_Pareto_Frontier_Cost_vs_Profit_vs_Vessels_Handled.png.
+2025-08-25 23:13:48,816 - kaleido._kaleido_tab - INFO - Sent big command for 3D_Pareto_Frontier_Cost_vs_Profit_vs_Vessels_Handled.png.
+2025-08-25 23:13:48,817 - kaleido.kaleido - INFO - Reloading tab D704 before return.
+2025-08-25 23:13:48,964 - kaleido.kaleido - INFO - Putting tab D704 back (queue size: 0).
+2025-08-25 23:13:48,964 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-25 23:13:48,964 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-25 23:13:48,965 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:48,966 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:48,966 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:48,966 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:48,966 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:48,971 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:48,971 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:48,972 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:48,972 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:48,972 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:49,310 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:49,310 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:49,352 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:49,353 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:49,397 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-25 23:13:49,398 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2025-08-25 23:13:49,399 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmppdd936az.
+2025-08-25 23:13:49,399 - choreographer.browser_async - INFO - Opening browser.
+2025-08-25 23:13:49,401 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmpuhkmcxmx.
+2025-08-25 23:13:49,401 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\tmfpr\AppData\Local\Temp\tmpuhkmcxmx
+2025-08-25 23:13:49,704 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/tmfpr/AppData/Local/Temp/tmppdd936az/index.html
+2025-08-25 23:13:49,708 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-25 23:13:50,887 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-25 23:13:50,888 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-25 23:13:50,888 - kaleido.kaleido - INFO - Got 4A99
+2025-08-25 23:13:50,888 - kaleido._kaleido_tab - INFO - Processing All_Objectives_Comparison.png
+2025-08-25 23:13:50,888 - kaleido._kaleido_tab - INFO - Sending big command for All_Objectives_Comparison.png.
+2025-08-25 23:13:50,999 - kaleido._kaleido_tab - INFO - Sent big command for All_Objectives_Comparison.png.
+2025-08-25 23:13:50,999 - kaleido.kaleido - INFO - Reloading tab 4A99 before return.
+2025-08-25 23:13:51,123 - kaleido.kaleido - INFO - Putting tab 4A99 back (queue size: 0).
+2025-08-25 23:13:51,123 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-25 23:13:51,123 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-25 23:13:51,125 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:51,126 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:51,126 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:51,126 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:51,126 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:51,128 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:51,128 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:51,128 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:51,128 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:51,128 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:51,469 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:51,470 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:51,497 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:51,497 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:51,590 - choreographer.browsers.chromium - INFO - Chromium init'ed with kwargs {}
+2025-08-25 23:13:51,591 - choreographer.browsers.chromium - INFO - Found chromium path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2025-08-25 23:13:51,592 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmp4u1g6gzw.
+2025-08-25 23:13:51,592 - choreographer.browser_async - INFO - Opening browser.
+2025-08-25 23:13:51,593 - choreographer.utils._tmpfile - INFO - Temp directory created: C:\Users\tmfpr\AppData\Local\Temp\tmp59rhchq1.
+2025-08-25 23:13:51,594 - choreographer.browsers.chromium - INFO - Temporary directory at: C:\Users\tmfpr\AppData\Local\Temp\tmp59rhchq1
+2025-08-25 23:13:51,878 - kaleido.kaleido - INFO - Conforming 1 to file:///C:/Users/tmfpr/AppData/Local/Temp/tmp4u1g6gzw/index.html
+2025-08-25 23:13:51,879 - kaleido.kaleido - INFO - Waiting on all navigates
+2025-08-25 23:13:52,683 - kaleido.kaleido - INFO - All navigates done, putting them all in queue.
+2025-08-25 23:13:52,684 - kaleido.kaleido - INFO - Getting tab from queue (has 1)
+2025-08-25 23:13:52,685 - kaleido.kaleido - INFO - Got 3A7F
+2025-08-25 23:13:52,685 - kaleido._kaleido_tab - INFO - Processing Parameter_Distributions_All_Solutions_vs_Pareto_Frontier.png
+2025-08-25 23:13:52,685 - kaleido._kaleido_tab - INFO - Sending big command for Parameter_Distributions_All_Solutions_vs_Pareto_Frontier.png.
+2025-08-25 23:13:52,853 - kaleido._kaleido_tab - INFO - Sent big command for Parameter_Distributions_All_Solutions_vs_Pareto_Frontier.png.
+2025-08-25 23:13:52,854 - kaleido.kaleido - INFO - Reloading tab 3A7F before return.
+2025-08-25 23:13:53,420 - kaleido.kaleido - INFO - Putting tab 3A7F back (queue size: 0).
+2025-08-25 23:13:53,420 - kaleido.kaleido - INFO - Waiting for all cleanups to finish.
+2025-08-25 23:13:53,420 - kaleido.kaleido - INFO - Exiting Kaleido
+2025-08-25 23:13:53,421 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:53,421 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:53,421 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:53,422 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:53,422 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:53,424 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:53,428 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:53,428 - kaleido.kaleido - INFO - Cancelling tasks.
+2025-08-25 23:13:53,428 - kaleido.kaleido - INFO - Exiting Kaleido/Choreo
+2025-08-25 23:13:53,429 - choreographer.browser_async - INFO - Closing browser.
+2025-08-25 23:13:53,706 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:53,707 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.
+2025-08-25 23:13:53,728 - python.pareto_analyzer - INFO - Comprehensive report generated in optimization_results/pareto_analysis
+2025-08-25 23:13:53,730 - __main__ - INFO - Pareto analysis completed successfully
+2025-08-25 23:13:53,730 - __main__ - INFO - Total solutions: 11
+2025-08-25 23:13:53,731 - __main__ - INFO - Pareto solutions: 7
+2025-08-25 23:13:53,731 - __main__ - INFO - Pareto percentage: 63.64%
+2025-08-25 23:13:53,731 - __main__ - INFO - All results saved to: optimization_results
+2025-08-25 23:13:53,789 - choreographer.utils._tmpfile - INFO - TemporaryDirectory.cleanup() worked.
+2025-08-25 23:13:53,790 - choreographer.utils._tmpfile - INFO - shutil.rmtree worked.

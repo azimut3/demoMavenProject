@@ -33,7 +33,6 @@ ENV/
 
 # Logs
 logs/*.log
-*.log
 
 # Results and Optimization Output
 results/

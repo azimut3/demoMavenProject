@@ -1,0 +1,15 @@
+2025-08-25 18:56:27,332 - __main__ - INFO - Starting AnyLogic Model Optimization
+2025-08-25 18:56:27,333 - __main__ - INFO - Arguments: {'java_app_path': None, 'java_url': 'http://localhost:8080', 'population_size': 30, 'generations': 50, 'mutation_rate': 0.1, 'crossover_rate': 0.7, 'timeout': 300, 'output_dir': 'optimization_results', 'analysis_only': False, 'results_file': None, 'log_level': 'INFO', 'no_auto_start': True}
+2025-08-25 18:56:27,333 - __main__ - INFO - Skipping Java application startup (--no-auto-start flag used)
+2025-08-25 18:56:27,333 - __main__ - INFO - Make sure the Java application is running at: http://localhost:8080
+2025-08-25 18:56:27,341 - __main__ - INFO - Java application is running and accessible
+2025-08-25 18:56:27,342 - __main__ - INFO - Starting genetic algorithm optimization...
+2025-08-25 18:56:27,342 - __main__ - INFO - Population size: 30
+2025-08-25 18:56:27,342 - __main__ - INFO - Generations: 50
+2025-08-25 18:56:27,343 - __main__ - INFO - Mutation rate: 0.1
+2025-08-25 18:56:27,343 - __main__ - INFO - Crossover rate: 0.7
+2025-08-25 18:56:27,343 - python.genetic_optimizer - INFO - Starting genetic algorithm optimization...
+2025-08-25 18:56:27,803 - python.java_interface - ERROR - Simulation failed with status 500: {"error":"Simulation failed: java.lang.RuntimeException: Failed to run experiment: null"}
+2025-08-25 18:56:27,834 - python.java_interface - ERROR - Simulation failed with status 500: {"error":"Simulation failed: java.lang.RuntimeException: Failed to run experiment: null"}
+2025-08-25 18:56:27,881 - python.java_interface - ERROR - Simulation failed with status 500: {"error":"Simulation failed: java.lang.RuntimeException: Failed to run experiment: null"}
+2025-08-25 18:57:04,308 - __main__ - INFO - Optimization interrupted by user

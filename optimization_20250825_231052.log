@@ -1,0 +1,34 @@
+2025-08-25 23:10:52,388 - __main__ - INFO - Starting AnyLogic Model Optimization
+2025-08-25 23:10:52,389 - __main__ - INFO - Arguments: {'java_app_path': None, 'java_url': 'http://localhost:8080', 'population_size': 1, 'generations': 3, 'mutation_rate': 0.1, 'crossover_rate': 0.7, 'timeout': 300, 'output_dir': 'optimization_results', 'analysis_only': False, 'results_file': None, 'log_level': 'INFO', 'no_auto_start': True}
+2025-08-25 23:10:52,389 - __main__ - INFO - Skipping Java application startup (--no-auto-start flag used)
+2025-08-25 23:10:52,389 - __main__ - INFO - Make sure the Java application is running at: http://localhost:8080
+2025-08-25 23:10:52,398 - __main__ - INFO - Java application is running and accessible
+2025-08-25 23:10:52,398 - __main__ - INFO - Starting genetic algorithm optimization...
+2025-08-25 23:10:52,399 - __main__ - INFO - Population size: 1
+2025-08-25 23:10:52,399 - __main__ - INFO - Generations: 3
+2025-08-25 23:10:52,399 - __main__ - INFO - Mutation rate: 0.1
+2025-08-25 23:10:52,399 - __main__ - INFO - Crossover rate: 0.7
+2025-08-25 23:10:52,399 - python.genetic_optimizer - INFO - Starting genetic algorithm optimization...
+2025-08-25 23:11:08,419 - __main__ - ERROR - Optimization failed: Sample larger than population or is negative
+Traceback (most recent call last):
+  File "H:\University\PHD\Model\Anylogic model & Java\demoMavenProject\python\main_optimizer.py", line 195, in main
+    population, pareto_front = optimizer.optimize()
+                               ~~~~~~~~~~~~~~~~~~^^
+  File "H:\University\PHD\Model\Anylogic model & Java\demoMavenProject\python\genetic_optimizer.py", line 215, in optimize
+    pop, logbook = algorithms.eaMuPlusLambda(
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pop, self.toolbox,
+        ^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stats=stats, halloffame=hof, verbose=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tmfpr\AppData\Local\Programs\Python\Python313\Lib\site-packages\deap\algorithms.py", line 316, in eaMuPlusLambda
+    offspring = varOr(population, toolbox, lambda_, cxpb, mutpb)
+  File "C:\Users\tmfpr\AppData\Local\Programs\Python\Python313\Lib\site-packages\deap\algorithms.py", line 233, in varOr
+    ind1, ind2 = [toolbox.clone(i) for i in random.sample(population, 2)]
+                                            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\tmfpr\AppData\Local\Programs\Python\Python313\Lib\random.py", line 434, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative

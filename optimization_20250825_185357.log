@@ -1,0 +1,16 @@
+2025-08-25 18:53:57,043 - __main__ - INFO - Starting AnyLogic Model Optimization
+2025-08-25 18:53:57,043 - __main__ - INFO - Arguments: {'java_app_path': None, 'java_url': 'http://localhost:8080', 'population_size': 50, 'generations': 100, 'mutation_rate': 0.1, 'crossover_rate': 0.7, 'timeout': 300, 'output_dir': 'optimization_results', 'analysis_only': False, 'results_file': None, 'log_level': 'INFO', 'no_auto_start': True}
+2025-08-25 18:53:57,044 - __main__ - INFO - Skipping Java application startup (--no-auto-start flag used)
+2025-08-25 18:53:57,045 - __main__ - INFO - Make sure the Java application is running at: http://localhost:8080
+2025-08-25 18:53:57,054 - __main__ - INFO - Java application is running and accessible
+2025-08-25 18:53:57,055 - __main__ - INFO - Starting genetic algorithm optimization...
+2025-08-25 18:53:57,055 - __main__ - INFO - Population size: 50
+2025-08-25 18:53:57,055 - __main__ - INFO - Generations: 100
+2025-08-25 18:53:57,056 - __main__ - INFO - Mutation rate: 0.1
+2025-08-25 18:53:57,056 - __main__ - INFO - Crossover rate: 0.7
+2025-08-25 18:53:57,056 - python.genetic_optimizer - INFO - Starting genetic algorithm optimization...
+2025-08-25 18:53:57,572 - python.java_interface - ERROR - Simulation failed with status 500: {"error":"Simulation failed: java.lang.RuntimeException: Failed to run experiment: null"}
+2025-08-25 18:54:22,792 - python.java_interface - ERROR - Error running simulation: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-08-25 18:54:26,871 - python.java_interface - ERROR - Error running simulation: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/simulation/run (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001630B9EE9E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-08-25 18:54:30,975 - python.java_interface - ERROR - Error running simulation: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /api/simulation/run (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001630BA85010>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-08-25 18:54:33,027 - __main__ - INFO - Optimization interrupted by user

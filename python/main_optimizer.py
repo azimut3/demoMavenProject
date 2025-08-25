@@ -11,8 +11,8 @@ from datetime import datetime
 from typing import Dict, Any
 
 from java_interface import JavaModelInterface
-from genetic_optimizer import GeneticOptimizer
-from pareto_analyzer import ParetoAnalyzer
+from .genetic_optimizer import GeneticOptimizer
+from .pareto_analyzer import ParetoAnalyzer
 
 def setup_logging(log_level: str = "INFO") -> None:
     """Setup logging configuration"""

@@ -1,0 +1,49 @@
+{
+  "genetic_algorithm": {
+    "population_size": 50,
+    "generations": 100,
+    "mutation_rate": 0.1,
+    "crossover_rate": 0.7
+  },
+  "parameter_bounds": {
+    "varOfWork": [
+      3,
+      3
+    ],
+    "capacityOfMainConveyor": [
+      800,
+      1200
+    ],
+    "quantityOfVagonsToSilageAtOnce": [
+      8,
+      10
+    ],
+    "quantityOfVehicleDischargeStations": [
+      2,
+      4
+    ],
+    "numberOfVehicleSilages": [
+      2,
+      4
+    ],
+    "capacityOfVehicleSilages": [
+      800,
+      1000
+    ],
+    "quantityOfSilages": [
+      19,
+      21
+    ],
+    "yearsModelWorking": [
+      1,
+      1
+    ]
+  },
+  "objectives": {
+    "vesselsHandledQtt": "maximize",
+    "primeCost": "minimize",
+    "handlingTime": "minimize",
+    "profit": "maximize",
+    "timeAtTerminal": "minimize"
+  }
+}

@@ -1,0 +1,8 @@
+{"varOfWork":3,"capacityOfMainConveyor":800,"quantityOfVagonsToSilageAtOnce":8,"quantityOfVehicleDischargeStations":2,"numberOfVehicleSilages":2,"capacityOfVehicleSilages":800,"quantityOfSilages":17,"yearsModelWorking":1}
+{"varOfWork":3,"capacityOfMainConveyor":800,"quantityOfVagonsToSilageAtOnce":8,"quantityOfVehicleDischargeStations":2,"numberOfVehicleSilages":2,"capacityOfVehicleSilages":800,"quantityOfSilages":17,"yearsModelWorking":1}
+{"varOfWork":3,"capacityOfMainConveyor":800,"quantityOfVagonsToSilageAtOnce":8,"quantityOfVehicleDischargeStations":2,"numberOfVehicleSilages":2,"capacityOfVehicleSilages":800,"quantityOfSilages":17,"yearsModelWorking":1}
+{"varOfWork":3,"capacityOfMainConveyor":800,"quantityOfVagonsToSilageAtOnce":8,"quantityOfVehicleDischargeStations":2,"numberOfVehicleSilages":2,"capacityOfVehicleSilages":800,"quantityOfSilages":17,"yearsModelWorking":1}
+{"varOfWork":3,"capacityOfMainConveyor":800,"quantityOfVagonsToSilageAtOnce":8,"quantityOfVehicleDischargeStations":2,"numberOfVehicleSilages":2,"capacityOfVehicleSilages":800,"quantityOfSilages":17,"yearsModelWorking":1}
+{"varOfWork":3,"capacityOfMainConveyor":800,"quantityOfVagonsToSilageAtOnce":8,"quantityOfVehicleDischargeStations":2,"numberOfVehicleSilages":2,"capacityOfVehicleSilages":800,"quantityOfSilages":17,"yearsModelWorking":1}
+{"varOfWork":3,"capacityOfMainConveyor":800,"quantityOfVagonsToSilageAtOnce":8,"quantityOfVehicleDischargeStations":2,"numberOfVehicleSilages":2,"capacityOfVehicleSilages":800,"quantityOfSilages":17,"yearsModelWorking":1}
+{"varOfWork":3,"capacityOfMainConveyor":800,"quantityOfVagonsToSilageAtOnce":8,"quantityOfVehicleDischargeStations":2,"numberOfVehicleSilages":2,"capacityOfVehicleSilages":800,"quantityOfSilages":17,"yearsModelWorking":1}

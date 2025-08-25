@@ -14,6 +14,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+import java.util.stream.Collectors;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class DemoAnylogicHibridApplication {
@@ -28,64 +29,14 @@ public class DemoAnylogicHibridApplication {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         SpringApplication.run(DemoAnylogicHibridApplication.class, args);
-        System.out.println("Initialized");
-        List<Iteration> executedIterations = getExistingIterations();
-
-        Integer skippedIterations = 0;
-
-        for (Integer capacityOfMainConveyor = 800; capacityOfMainConveyor <= 1200; capacityOfMainConveyor += 200) {
-            for (Integer quantityOfVagonsToSilageAtOnce = 8; quantityOfVagonsToSilageAtOnce <= 10; quantityOfVagonsToSilageAtOnce += 1) {
-                for (Integer quantityOfVehicleDischargeStations = 2; quantityOfVehicleDischargeStations <= 4; quantityOfVehicleDischargeStations += 1) {
-                    for (Integer numberOfVehicleSilages = 2; numberOfVehicleSilages <= 4; numberOfVehicleSilages += 1) {
-                        for (Integer capacityOfVehicleSilage = 800; capacityOfVehicleSilage <= 1000; capacityOfVehicleSilage += 100) {
-                            for (Integer quantityOfSilages = 17; quantityOfSilages <= 19; quantityOfSilages += 1) {
-                                Iteration iteration = new Iteration();
-                                iteration.setVarOfWork(3)
-                                        .setCapacityOfMainConveyor(capacityOfMainConveyor)
-                                        .setQuantityOfVagonsToSilageAtOnce(quantityOfVagonsToSilageAtOnce)
-                                        .setQuantityOfVehicleDischargeStations(quantityOfVehicleDischargeStations)
-                                        .setNumberOfVehicleSilages(numberOfVehicleSilages)
-                                        .setCapacityOfVehicleSilages(capacityOfVehicleSilage)
-                                        .setQuantityOfSilages(quantityOfSilages)
-                                        .setYearsModelWorking(1);
-
-                                if(!executedIterations.contains(iteration)) {
-                                    iterationsQueue.add(iteration);
-                                } else {
-                                    System.out.println("Skipping iteration: " + iteration);
-                                    skippedIterations++;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        System.out.println("===== Iterations skipped in total: " + skippedIterations + " =====");
-
-
-        iterationQtt = iterationsQueue.size();
-
-
-        List<IterationCallable> callableList = iterationsQueue.stream().map(iteration -> new IterationCallable(configRanFile, statsFile, iteration)).toList();
-        ConcurrentLinkedQueue<IterationCallable> callableQueue = new ConcurrentLinkedQueue();
-        callableQueue.addAll(callableList);
-        ExecutorService updateService = Executors.newFixedThreadPool(10);
-        while(callableQueue.size() != 0) {
-            System.out.println("Current queue size: " + callableQueue.size());
-
-            Future<IterationStats> futureResult = updateService.submit(callableQueue.poll());
-            IterationStats result = null;
-            try {
-                result = futureResult.get(5, TimeUnit.MINUTES);
-            } catch (TimeoutException | ExecutionException e) {
-                System.out.println("No response after one " + TimeUnit.MINUTES);
-                futureResult.cancel(true);
-                System.out.println("updateService " + updateService);
-            }
-
-        }
+        System.out.println("AnyLogic Simulation API Server Started");
+        System.out.println("Available endpoints:");
+        System.out.println("  POST /api/simulation/run - Run simulation with parameters");
+        System.out.println("  GET  /api/simulation/health - Health check");
+        System.out.println("  GET  /api/simulation/results/{id} - Get specific results");
+        System.out.println("  GET  /api/simulation/all-results - Get all results");
+        System.out.println("  DELETE /api/simulation/clear-cache - Clear results cache");
+        System.out.println("Server is ready to accept requests from Python optimizer...");
     }
 
     public static List<Iteration> getExistingIterations() throws IOException, ClassNotFoundException {

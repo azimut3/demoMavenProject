@@ -34,7 +34,7 @@ class GeneticOptimizer:
             "quantityOfVehicleDischargeStations": (2, 4),  # Conservative range
             "numberOfVehicleSilages": (2, 4),  # Conservative range
             "capacityOfVehicleSilages": (800, 1000),  # Conservative range
-            "quantityOfSilages": (19, 21),  # Very conservative to avoid array issues
+            "quantityOfSilages": (18, 20),  # Very conservative to avoid array issues
             "yearsModelWorking": (1, 1)  # Fixed to 1 year for faster execution
         }
         
@@ -123,23 +123,33 @@ class GeneticOptimizer:
         """Evaluate an individual by running the simulation"""
         parameters = self._individual_to_parameters(individual)
         
-        # Run simulation
-        results = self.java_interface.run_simulation(parameters)
-        
-        if results is None:
+        try:
+            # Run simulation
+            results = self.java_interface.run_simulation(parameters)
+            
+            if results is None:
+                # Return worst possible values if simulation fails
+                self.logger.warning(f"Simulation failed for parameters: {parameters}")
+                return (-float('inf'), float('inf'), float('inf'), -float('inf'), float('inf'))
+            
+            # Extract KPIs from results
+            kpis = [
+                results.get("vesselsHandledQtt", 0),
+                results.get("primeCost", float('inf')),
+                results.get("handlingTime", float('inf')),
+                results.get("profit", -float('inf')),
+                results.get("timeAtTerminal", float('inf'))
+            ]
+            
+            # Log successful evaluation
+            self.logger.debug(f"Successful evaluation: vessels={kpis[0]}, cost={kpis[1]}, profit={kpis[3]}")
+            
+            return tuple(kpis)
+            
+        except Exception as e:
+            self.logger.error(f"Error evaluating individual with parameters {parameters}: {e}")
             # Return worst possible values if simulation fails
             return (-float('inf'), float('inf'), float('inf'), -float('inf'), float('inf'))
-        
-        # Extract KPIs from results
-        kpis = [
-            results.get("vesselsHandledQtt", 0),
-            results.get("primeCost", float('inf')),
-            results.get("handlingTime", float('inf')),
-            results.get("profit", -float('inf')),
-            results.get("timeAtTerminal", float('inf'))
-        ]
-        
-        return tuple(kpis)
     
     def _mutate_individual(self, individual):
         """Custom mutation operator that respects parameter bounds"""

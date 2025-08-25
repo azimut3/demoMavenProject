@@ -1,0 +1,1092 @@
+{
+  "population": [
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 880,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        110.0,
+        353.95,
+        31.131052019907763,
+        704633930.95,
+        13.87272034065971
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 880,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        110.0,
+        353.95,
+        31.131052019907763,
+        704633930.95,
+        13.87272034065971
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        105.0,
+        367.08,
+        21.902110492570927,
+        671562098.2,
+        14.251582321113808
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 881,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        110.0,
+        354.81,
+        30.74032227323211,
+        690660712.05,
+        14.095837968438504
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 881,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        110.0,
+        354.81,
+        30.74032227323211,
+        690660712.05,
+        14.095837968438504
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 998,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 820,
+        "quantityOfSilages": 17,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        96.0,
+        376.55,
+        38.96252701422271,
+        623350609.8,
+        13.7780832323242
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 880,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        84.0,
+        453.62,
+        13.58348241319638,
+        508280538.0,
+        13.213720580762091
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 880,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        84.0,
+        453.62,
+        13.58348241319638,
+        508280538.0,
+        13.213720580762091
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 880,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        84.0,
+        453.62,
+        13.58348241319638,
+        508280538.0,
+        13.213720580762091
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1087,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 923,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        92.0,
+        397.03,
+        16.94603365396791,
+        595544625.05,
+        13.348962768616811
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1002,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        94.0,
+        406.36,
+        18.889347775836914,
+        587445834.1,
+        13.624577539838544
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 998,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 831,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        97.0,
+        403.15,
+        17.954773417312012,
+        576711899.85,
+        13.91622086324662
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 881,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 820,
+        "quantityOfSilages": 17,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        98.0,
+        383.62,
+        25.194529437297003,
+        608256005.0,
+        13.552152093093834
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 881,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 820,
+        "quantityOfSilages": 17,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        98.0,
+        383.62,
+        25.194529437297003,
+        608256005.0,
+        13.552152093093834
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 881,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 820,
+        "quantityOfSilages": 17,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        98.0,
+        383.62,
+        25.194529437297003,
+        608256005.0,
+        13.552152093093834
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 998,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        103.0,
+        376.36,
+        23.44969252955495,
+        649840944.35,
+        14.02341219761059
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        101.0,
+        375.35,
+        21.46360913817208,
+        645077125.9,
+        13.968564783810706
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1002,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 831,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        95.0,
+        404.93,
+        21.57582029448855,
+        579789173.0,
+        13.636756363021059
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 913,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        106.0,
+        378.6,
+        23.38307036265892,
+        644784719.55,
+        14.130830086702993
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 923,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        104.0,
+        374.54,
+        20.360904155985864,
+        643064902.8,
+        13.780948263421992
+      ]
+    }
+  ],
+  "pareto_front": [
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 880,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        110.0,
+        353.95,
+        31.131052019907763,
+        704633930.95,
+        13.87272034065971
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 881,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        110.0,
+        354.81,
+        30.74032227323211,
+        690660712.05,
+        14.095837968438504
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        107.0,
+        361.21,
+        27.39634036428469,
+        686017121.75,
+        14.16813908052679
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 881,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        107.0,
+        372.31,
+        22.746633570547,
+        659162993.35,
+        13.83867222592571
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 999,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 948,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        106.0,
+        361.42,
+        34.49145671280593,
+        665998416.95,
+        13.773671523057532
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 923,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        106.0,
+        364.06,
+        28.801637180406956,
+        678933485.3,
+        14.155609084392083
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 998,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        105.0,
+        362.75,
+        28.785861953954797,
+        670757918.15,
+        14.043644759090423
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        105.0,
+        367.08,
+        21.902110492570927,
+        671562098.2,
+        14.251582321113808
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 999,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 867,
+        "quantityOfSilages": 17,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        104.0,
+        361.64,
+        34.37710213205388,
+        657468432.0,
+        13.79532994806892
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 923,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        104.0,
+        374.54,
+        20.360904155985864,
+        643064902.8,
+        13.780948263421992
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        104.0,
+        374.54,
+        20.360904155985864,
+        643064902.8,
+        13.780948263421992
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 901,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        102.0,
+        370.41,
+        26.61373422054387,
+        644773821.8,
+        13.805885295765785
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 923,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        102.0,
+        376.39,
+        18.674438233642263,
+        645953347.2,
+        13.814448695989471
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        101.0,
+        375.35,
+        21.46360913817208,
+        645077125.9,
+        13.968564783810706
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 998,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 820,
+        "quantityOfSilages": 17,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        101.0,
+        377.85,
+        34.59962462330021,
+        620527437.25,
+        13.614853699769306
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 998,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        101.0,
+        378.86,
+        30.416172035879725,
+        632870031.05,
+        13.749376940103021
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 880,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 831,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        100.0,
+        374.17,
+        24.003607835760562,
+        643344057.25,
+        13.824607288814265
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 831,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        100.0,
+        374.25,
+        26.624764892477252,
+        643151573.75,
+        13.733902637828315
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1055,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 819,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        100.0,
+        376.53,
+        23.709790662905988,
+        645624907.0,
+        13.69181230917229
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 947,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        100.0,
+        384.53,
+        19.49012312369252,
+        627992687.45,
+        13.802982974217207
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 965,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 822,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        100.0,
+        387.93,
+        17.233637654978203,
+        620770170.5,
+        13.89466611301859
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 999,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 948,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        99.0,
+        373.39,
+        26.435001431437563,
+        637984027.25,
+        13.769720954360926
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 998,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 831,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        99.0,
+        386.09,
+        25.923269055781727,
+        617304450.8,
+        13.409413607177402
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1001,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 948,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        99.0,
+        387.64,
+        25.11391884186235,
+        614051966.95,
+        13.43827196207875
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 881,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 820,
+        "quantityOfSilages": 17,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        98.0,
+        383.62,
+        25.194529437297003,
+        608256005.0,
+        13.552152093093834
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1001,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 948,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        98.0,
+        389.28,
+        22.09504983512577,
+        610648663.75,
+        13.64316983818947
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1001,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 881,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        97.0,
+        395.47,
+        18.406712878847387,
+        608809066.1,
+        13.603689439224338
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1002,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 831,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        96.0,
+        388.67,
+        22.68924489393399,
+        605158768.3,
+        13.756383432796326
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1055,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 819,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        96.0,
+        402.79,
+        16.468309900654447,
+        590803413.35,
+        13.443536865950735
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 930,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 923,
+        "quantityOfSilages": 17,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        95.0,
+        385.88,
+        23.947884505264884,
+        607275475.15,
+        13.630172456201255
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1002,
+        "quantityOfVagonsToSilageAtOnce": 9,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 901,
+        "quantityOfSilages": 18,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        95.0,
+        394.09,
+        23.223538582444796,
+        600866603.55,
+        13.603343009383584
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 959,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 950,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        95.0,
+        404.37,
+        17.108425255804164,
+        591247505.05,
+        13.926759145418098
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1087,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 923,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        93.0,
+        401.05,
+        14.033492576770573,
+        587702262.5,
+        13.207340310638788
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 1087,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 2,
+        "numberOfVehicleSilages": 2,
+        "capacityOfVehicleSilages": 923,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        92.0,
+        397.03,
+        16.94603365396791,
+        595544625.05,
+        13.348962768616811
+      ]
+    },
+    {
+      "parameters": {
+        "varOfWork": 3,
+        "capacityOfMainConveyor": 880,
+        "quantityOfVagonsToSilageAtOnce": 8,
+        "quantityOfVehicleDischargeStations": 3,
+        "numberOfVehicleSilages": 3,
+        "capacityOfVehicleSilages": 865,
+        "quantityOfSilages": 19,
+        "yearsModelWorking": 1
+      },
+      "fitness": [
+        84.0,
+        453.62,
+        13.58348241319638,
+        508280538.0,
+        13.213720580762091
+      ]
+    }
+  ],
+  "parameter_bounds": {
+    "varOfWork": [
+      3,
+      3
+    ],
+    "capacityOfMainConveyor": [
+      800,
+      1100
+    ],
+    "quantityOfVagonsToSilageAtOnce": [
+      8,
+      9
+    ],
+    "quantityOfVehicleDischargeStations": [
+      2,
+      3
+    ],
+    "numberOfVehicleSilages": [
+      2,
+      3
+    ],
+    "capacityOfVehicleSilages": [
+      800,
+      950
+    ],
+    "quantityOfSilages": [
+      17,
+      19
+    ],
+    "yearsModelWorking": [
+      1,
+      1
+    ]
+  },
+  "objectives": {
+    "vesselsHandledQtt": "maximize",
+    "primeCost": "minimize",
+    "handlingTime": "minimize",
+    "profit": "maximize",
+    "timeAtTerminal": "minimize"
+  }
+}

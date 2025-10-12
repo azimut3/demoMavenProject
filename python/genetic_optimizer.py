@@ -40,7 +40,7 @@ class GeneticOptimizer:
             "quantityOfVehicleDischargeStations": (2, 4),  # Conservative range
             "numberOfVehicleSilages": (2, 4),  # Conservative range
             "capacityOfVehicleSilages": (800, 1000),  # Conservative range
-            "quantityOfSilages": (18, 20),  # Very conservative to avoid array issues
+            "quantityOfSilages": (18, 19),  # Very conservative to avoid array issues
             "yearsModelWorking": (1, 1)  # Fixed to 1 year for faster execution
         }
         

@@ -67,7 +67,7 @@ pip install -r requirements.txt
 Run the demo to see the Pareto analysis in action:
 
 ```bash
-python main_optimizer.py
+python -m python.main_optimizer
 ```
 
 This will run with mock data and generate sample Pareto frontier visualizations.
@@ -81,13 +81,13 @@ This will run with mock data and generate sample Pareto frontier visualizations.
 
 2. **Run the Python Optimizer**:
    ```bash
-   python main_optimizer.py --java-app-path . --population-size 30 --generations 50
+   python -m python.main_optimizer --java-app-path . --population-size 30 --generations 50
    ```
 
 ### Command Line Options
 
 ```bash
-python main_optimizer.py [OPTIONS]
+python -m python.main_optimizer [OPTIONS]
 
 Options:
   --java-app-path PATH        Path to Java Spring Boot application directory
@@ -107,12 +107,12 @@ Options:
 
 **Basic optimization with default settings:**
 ```bash
-python main_optimizer.py --java-app-path .
+python -m python.main_optimizer --java-app-path .
 ```
 
 **Custom optimization parameters:**
 ```bash
-python main_optimizer.py \
+python -m python.main_optimizer \
   --java-app-path . \
   --population-size 50 \
   --generations 100 \
@@ -123,7 +123,7 @@ python main_optimizer.py \
 
 **Analysis only (on existing results):**
 ```bash
-python main_optimizer.py --analysis-only --results-file optimization_results.json
+python -m python.main_optimizer --analysis-only --results-file optimization_results.json
 ```
 
 ## Output
@@ -208,7 +208,7 @@ The genetic algorithm operates within these parameter bounds:
 
 Enable debug logging for detailed information:
 ```bash
-python main_optimizer.py --log-level DEBUG
+python -m python.main_optimizer --log-level DEBUG
 ```
 
 ## Performance Tips

@@ -81,7 +81,7 @@ This will run with mock data and generate sample Pareto frontier visualizations.
 
 2. **Run the Python Optimizer**:
    ```bash
-   python -m python.main_optimizer --java-app-path . --population-size 30 --generations 50
+   python -m python.main_optimizer --population-size 40 --generations 50 --mutation-rate 0.02 --crossover-rate 0.9 --no-auto-start
    ```
 
 ### Command Line Options

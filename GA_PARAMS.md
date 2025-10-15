@@ -13,8 +13,8 @@ in python command:
 
 ```bash
 python3 -m python.main_optimizer \
-  --crossover-rate 0.9 
-  --mutation-rate 0.02
-  --population-size 40 
-  --generations 50 
+--crossover-rate 0.9 \
+--mutation-rate 0.02 \
+--population-size 40 \
+--generations 50
 ```

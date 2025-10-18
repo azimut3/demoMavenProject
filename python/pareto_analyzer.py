@@ -71,11 +71,11 @@ class ParetoAnalyzer:
                                  objectives: List[str] = None) -> pd.DataFrame:
         """
         Identify Pareto optimal solutions
-        
+
         Args:
             df: DataFrame with solutions and objectives
             objectives: List of objective column names to consider
-            
+
         Returns:
             DataFrame with only Pareto optimal solutions
         """
@@ -88,20 +88,27 @@ class ParetoAnalyzer:
             for j in range(len(df)):
                 if i != j:
                     # Check if solution j dominates solution i
-                    dominates = True
+                    at_least_one_better = False
+                    all_better_or_equal = True
+
                     for obj in objectives:
                         if obj in ["vesselsHandledQtt", "profit"]:
                             # Maximize objectives
-                            if df.iloc[j][obj] < df.iloc[i][obj]:
-                                dominates = False
+                            if df.iloc[j][obj] > df.iloc[i][obj]:
+                                at_least_one_better = True
+                            elif df.iloc[j][obj] < df.iloc[i][obj]:
+                                all_better_or_equal = False
                                 break
                         else:
                             # Minimize objectives
-                            if df.iloc[j][obj] > df.iloc[i][obj]:
-                                dominates = False
+                            if df.iloc[j][obj] < df.iloc[i][obj]:
+                                at_least_one_better = True
+                            elif df.iloc[j][obj] > df.iloc[i][obj]:
+                                all_better_or_equal = False
                                 break
 
-                    if dominates:
+                    # j dominates i only if better-or-equal in all AND strictly better in at least one
+                    if all_better_or_equal and at_least_one_better:
                         pareto_mask[i] = False
                         break
 

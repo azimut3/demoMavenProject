@@ -33,6 +33,7 @@ class GeneticOptimizer:
         self.logger = logging.getLogger(__name__)
 
         # ID tracking system
+        self.total_sol_counter = 0  # counts amount of all evaluated solutions, not only unique ones
         self.solution_counter = 0
         self.solution_ids = {}  # Maps solution hash to ID
         self.solution_history = []  # Track all solutions with IDs
@@ -136,6 +137,7 @@ class GeneticOptimizer:
     def _evaluate_individual(self, individual) -> Tuple[float, float, float, float, float]:
         """Evaluate an individual by running the simulation"""
         parameters = self._individual_to_parameters(individual)
+        self.total_sol_counter += 1
 
         # Return cached values if exist
         param_hash = self._get_sol_hash(parameters)
@@ -239,7 +241,7 @@ class GeneticOptimizer:
             pop, self.toolbox,
             mu=self.population_size, lambda_=self.population_size,
             cxpb=self.crossover_rate, mutpb=self.mutation_rate,
-            ngen=self.generations,
+            ngen=self.generations - 1,  # for some reason deap starts from 0 indexing, that's why -1
             stats=stats, halloffame=hof, verbose=True
         )
 
@@ -256,12 +258,12 @@ class GeneticOptimizer:
             "parameter_bounds": self.parameter_bounds,
             "objectives": self.objectives,
             "optimization_metadata": {
-                "total_solutions_evaluated": self.solution_counter,
+                "total_solutions_evaluated": self.total_sol_counter,
                 "unique_solutions": len(self.solution_ids),
                 "population_size": self.population_size,
                 "generations": self.generations,
                 "mutation_rate": self.mutation_rate,
-                "crossover_rate": self.crossover_rate
+                "crossover_rate": self.crossover_rate,
             }
         }
 

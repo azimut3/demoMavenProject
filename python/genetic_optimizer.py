@@ -37,6 +37,9 @@ class GeneticOptimizer:
         self.solution_ids = {}  # Maps solution hash to ID
         self.solution_history = []  # Track all solutions with IDs
 
+        # Solution results caching system
+        self.cache: dict[int, Tuple[float, float, float, float, float]] = {}
+
         # Parameter bounds - very conservative based on observed working values
         self.parameter_bounds = {
             "varOfWork": (3, 3),  # Fixed to known working value
@@ -134,6 +137,12 @@ class GeneticOptimizer:
         """Evaluate an individual by running the simulation"""
         parameters = self._individual_to_parameters(individual)
 
+        # Return cached values if exist
+        param_hash = self._get_sol_hash(parameters)
+        if param_hash in self.cache:
+            logging.info(f'Cache hit for the solution with hash: {param_hash}.')  # TODO remove after testing
+            return self.cache[param_hash]
+
         try:
             # Run simulation
             results = self.java_interface.run_simulation(parameters)
@@ -158,17 +167,26 @@ class GeneticOptimizer:
             # Log successful evaluation with ID
             self.logger.debug(f"Solution {solution_id}: vessels={kpis[0]}, cost={kpis[1]}, profit={kpis[3]}")
 
-            return tuple(kpis)
+            kpis = tuple(kpis)
+
+            # Return results and store in a cache system
+            self.cache[param_hash] = kpis
+
+            return kpis
 
         except Exception as e:
             self.logger.error(f"Error evaluating individual with parameters {parameters}: {e}")
             # Return worst possible values if simulation fails
-            return (-float('inf'), float('inf'), float('inf'), -float('inf'), float('inf'))
+            return -float('inf'), float('inf'), float('inf'), -float('inf'), float('inf')
+
+    @staticmethod
+    def _get_sol_hash(parameters: Dict[str, int]) -> int:
+        return hash(tuple(sorted(parameters.items())))
 
     def _get_or_create_solution_id(self, parameters: Dict[str, int], kpis: List[float]) -> str:
         """Generate or retrieve unique ID for a solution"""
         # Create a hash of the parameters to identify unique solutions
-        param_hash = hash(tuple(sorted(parameters.items())))
+        param_hash = self._get_sol_hash(parameters)
 
         if param_hash not in self.solution_ids:
             self.solution_counter += 1

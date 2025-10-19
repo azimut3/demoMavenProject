@@ -12,7 +12,7 @@ from typing import Dict, Any
 
 from .java_interface import JavaModelInterface
 from .genetic_optimizer import GeneticOptimizer
-from .pareto_analyzer import ParetoAnalyzer
+from .results_analyzer import ResultsAnalyzer
 
 
 def setup_logging(log_level: str = "INFO") -> None:
@@ -142,7 +142,7 @@ def main():
             return
 
         logger.info("Running Pareto analysis only")
-        analyzer = ParetoAnalyzer()
+        analyzer = ResultsAnalyzer()
         report = analyzer.generate_comprehensive_report(
             args["results_file"],
             f"{args['output_dir']}/pareto_analysis"
@@ -221,7 +221,7 @@ def main():
 
         # Run Pareto analysis
         logger.info("Running Pareto analysis...")
-        analyzer = ParetoAnalyzer()
+        analyzer = ResultsAnalyzer()
         report = analyzer.generate_comprehensive_report(
             results_file,
             f"{args['output_dir']}/pareto_analysis"
@@ -304,7 +304,7 @@ def run_demo():
         json.dump(mock_results, f, indent=2)
 
     # Run Pareto analysis
-    analyzer = ParetoAnalyzer()
+    analyzer = ResultsAnalyzer()
     report = analyzer.generate_comprehensive_report(
         "demo_results.json",
         "demo_analysis"

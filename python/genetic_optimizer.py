@@ -199,7 +199,7 @@ class GeneticOptimizer:
             solution_record = {
                 "id": solution_id,
                 "parameters": parameters.copy(),
-                "kpis": kpis.copy(),
+                "fitness": kpis.copy(),
                 "timestamp": datetime.now().isoformat(),
                 "generation": None  # Will be set during optimization
             }

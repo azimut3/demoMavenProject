@@ -122,6 +122,21 @@ class ResultsAnalyzer:
 
         return df[pareto_mask]
 
+    @staticmethod
+    def _filter_pareto(
+            pareto_df: pd.DataFrame,
+            sol_df: pd.DataFrame,
+    ) -> pd.DataFrame:
+        """Filter pareto points out of all solutions"""
+        if 'id' in sol_df.columns and 'id' in pareto_df.columns:
+            # Remove solutions that have IDs present in pareto_df
+            sol_df_filtered = sol_df[~sol_df['id'].isin(pareto_df['id'])]
+        else:
+            # Fall back to comparing by index if no 'id' column
+            sol_df_filtered = sol_df[~sol_df.index.isin(pareto_df.index)]
+
+        return sol_df_filtered
+
     def plot_2d_pareto_frontier(
             self,
             pareto_df: pd.DataFrame,
@@ -133,24 +148,15 @@ class ResultsAnalyzer:
     ) -> go.Figure:
         fig = go.Figure()
 
-        # Filter out pareto points from sol_df
-        # Assuming there's an 'id' column to match on, or use index if no 'id' column exists
-        if 'id' in sol_df.columns and 'id' in pareto_df.columns:
-            # Remove solutions that have IDs present in pareto_df
-            sol_df_filtered = sol_df[~sol_df['id'].isin(pareto_df['id'])]
-        else:
-            # Fall back to comparing by index if no 'id' column
-            sol_df_filtered = sol_df[~sol_df.index.isin(pareto_df.index)]
-
         # plot all solution points (excluding pareto points)
         fig.add_trace(go.Scatter(
-            x=sol_df_filtered[x_obj],
-            y=sol_df_filtered[y_obj],
+            x=sol_df[x_obj],
+            y=sol_df[y_obj],
             mode='markers',
             name='All Solutions',
             marker=dict(color='lightblue', size=8, opacity=0.6),
             hovertemplate=f'ID: %{{customdata}}<br>{x_obj}: %{{x}}<br>{y_obj}: %{{y}}<extra></extra>',
-            customdata=sol_df_filtered.get('id', ['N/A'] * len(sol_df_filtered))
+            customdata=sol_df.get('id', ['N/A'] * len(sol_df))
         ))
 
         # plot pareto points
@@ -218,6 +224,7 @@ class ResultsAnalyzer:
         # Extract data
         pareto_df = self.extract_solution_data(results, 'pareto_front')
         sol_df = self.extract_solution_data(results, 'solution_history')
+        sold_df = self._filter_pareto(pareto_df, sol_df)
         if pareto_df.empty or sol_df.empty:
             self.logger.error("No data found in results file")
             return {}
@@ -238,4 +245,41 @@ class ResultsAnalyzer:
             )
             plots[f"2d_{x_obj}_vs_{y_obj}"] = fig
 
-        return {}
+        summary = {
+            'total_solutions': len(sol_df),
+            'pareto_solutions': len(pareto_df),
+            'pareto_percentage': len(pareto_df) / len(sol_df) * 100,
+            'kpi_ranges': {},
+            'pareto_kpi_ranges': {}
+        }
+
+        for kpi in self.kpi_names:
+            summary["kpi_ranges"][kpi] = {
+                "min": float(sol_df[kpi].min()),
+                "max": float(sol_df[kpi].max()),
+                "mean": float(sol_df[kpi].mean()),
+                "std": float(sol_df[kpi].std())
+            }
+
+            if len(pareto_df) > 0:
+                summary["pareto_kpi_ranges"][kpi] = {
+                    "min": float(pareto_df[kpi].min()),
+                    "max": float(pareto_df[kpi].max()),
+                    "mean": float(pareto_df[kpi].mean()),
+                    "std": float(pareto_df[kpi].std())
+                }
+
+        # Save summary
+        with open(f"{output_dir}/analysis_summary.json", 'w') as f:
+            json.dump(summary, f, indent=2)
+
+        # Save Pareto solutions
+        pareto_df.to_csv(f"{output_dir}/pareto_solutions.csv", index=False)
+
+        self.logger.info(f"Comprehensive report generated in {output_dir}")
+
+        return {
+            "summary": summary,
+            "plots": plots,
+            "pareto_solutions": pareto_df.to_dict('records')
+        }

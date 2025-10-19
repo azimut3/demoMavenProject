@@ -1,4 +1,5 @@
 import json
+import time
 import logging
 import random
 from datetime import datetime
@@ -31,6 +32,7 @@ class GeneticOptimizer:
         self.mutation_rate = mutation_rate
         self.crossover_rate = crossover_rate
         self.logger = logging.getLogger(__name__)
+        self.sim_run_time = []
 
         # ID tracking system
         self.total_sol_counter = 0  # counts amount of all evaluated solutions, not only unique ones
@@ -147,7 +149,10 @@ class GeneticOptimizer:
 
         try:
             # Run simulation
+            start = time.time()
             results = self.java_interface.run_simulation(parameters)
+            end = time.time()
+            self.sim_run_time.append(end-start)
 
             if results is None:
                 # Return worst possible values if simulation fails
@@ -264,6 +269,9 @@ class GeneticOptimizer:
                 "generations": self.generations,
                 "mutation_rate": self.mutation_rate,
                 "crossover_rate": self.crossover_rate,
+            },
+            "other_metadata": {
+                "avg_sim_run_time": round(np.mean(self.sim_run_time), 2)
             }
         }
 

@@ -119,9 +119,33 @@ class GeneticOptimizer:
 
         # Genetic operators
         self.toolbox.register("evaluate", self._evaluate_individual)
-        self.toolbox.register("mate", tools.cxTwoPoint)
-        self.toolbox.register("mutate", self._mutate_individual)
+        self.toolbox.register("mate", tools.cxBlend, alpha=0.5)
         self.toolbox.register("select", tools.selNSGA2)
+        self.toolbox.register(
+            "mutate",
+            tools.mutPolynomialBounded,
+            low=[
+                self.parameter_bounds['varOfWork'][0],
+                self.parameter_bounds['capacityOfMainConveyor'][0],
+                self.parameter_bounds['quantityOfVagonsToSilageAtOnce'][0],
+                self.parameter_bounds['quantityOfVehicleDischargeStations'][0],
+                self.parameter_bounds['numberOfVehicleSilages'][0],
+                self.parameter_bounds['capacityOfVehicleSilages'][0],
+                self.parameter_bounds['quantityOfSilages'][0],
+                self.parameter_bounds['yearsModelWorking'][0],
+            ],
+            up=[
+                self.parameter_bounds['varOfWork'][1],
+                self.parameter_bounds['capacityOfMainConveyor'][1],
+                self.parameter_bounds['quantityOfVagonsToSilageAtOnce'][1],
+                self.parameter_bounds['quantityOfVehicleDischargeStations'][1],
+                self.parameter_bounds['numberOfVehicleSilages'][1],
+                self.parameter_bounds['capacityOfVehicleSilages'][1],
+                self.parameter_bounds['quantityOfSilages'][1],
+                self.parameter_bounds['yearsModelWorking'][1],
+            ],
+            eta=20  # value mentioned in Deb's book for NSGA-II on page 365, higher => less var from init genom
+        )
 
     def _individual_to_parameters(self, individual) -> Dict[str, int]:
         """Convert individual to parameter dictionary"""

@@ -144,7 +144,9 @@ class GeneticOptimizer:
                 self.parameter_bounds['quantityOfSilages'][1],
                 self.parameter_bounds['yearsModelWorking'][1],
             ],
-            eta=20  # value mentioned in Deb's book for NSGA-II on page 365, higher => less var from init genom
+            eta=20,  # value mentioned in Deb's book for NSGA-II on page 365, higher => less var from init genom
+            indpb=1/6  # 1/L, where L - amount of decision vars, we use 6 here because we have two vars that are
+            # basically constants (varOfWork and yearsModelWorking)
         )
 
     def _individual_to_parameters(self, individual) -> Dict[str, int]:

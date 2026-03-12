@@ -33,6 +33,9 @@ ENV/
 
 # Logs
 logs/*.log
+*.log
+results/
+optimization_results/
 
 # Results and Optimization Output
 results/
@@ -63,3 +66,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Other
+todo.md
+*.zip

@@ -1,10 +1,12 @@
 # AnyLogic Model Optimization with Genetic Algorithms
 
-This project provides a Python application that uses genetic algorithms to optimize AnyLogic simulation model parameters and build Pareto frontiers for multiple KPIs.
+This project provides a Python application that uses genetic algorithms to optimize AnyLogic simulation model parameters
+and build Pareto frontiers for multiple KPIs.
 
 ## Overview
 
 The system consists of:
+
 1. **Java Spring Boot Application**: Your existing AnyLogic model with REST API endpoints
 2. **Python Genetic Algorithm Optimizer**: Multi-objective optimization using DEAP library
 3. **Pareto Frontier Analyzer**: Comprehensive analysis and visualization of optimization results
@@ -12,11 +14,11 @@ The system consists of:
 ## Key Features
 
 - **Multi-objective Optimization**: Optimizes 5 KPIs simultaneously:
-  - Vessels Handled Quantity (maximize)
-  - Prime Cost (minimize)
-  - Handling Time (minimize)
-  - Profit (maximize)
-  - Time at Terminal (minimize)
+    - Vessels Handled Quantity (maximize)
+    - Prime Cost (minimize)
+    - Handling Time (minimize)
+    - Profit (maximize)
+    - Time at Terminal (minimize)
 
 - **Genetic Algorithm**: Uses NSGA-II algorithm for Pareto-optimal solutions
 - **Comprehensive Analysis**: 2D/3D Pareto frontiers, parallel coordinates plots, parameter distributions
@@ -67,7 +69,7 @@ pip install -r requirements.txt
 Run the demo to see the Pareto analysis in action:
 
 ```bash
-python main_optimizer.py
+python -m python.main_optimizer
 ```
 
 This will run with mock data and generate sample Pareto frontier visualizations.
@@ -81,13 +83,13 @@ This will run with mock data and generate sample Pareto frontier visualizations.
 
 2. **Run the Python Optimizer**:
    ```bash
-   python main_optimizer.py --java-app-path . --population-size 30 --generations 50
+   python -m python.main_optimizer --population-size 40 --generations 50 --no-auto-start
    ```
 
 ### Command Line Options
 
 ```bash
-python main_optimizer.py [OPTIONS]
+python -m python.main_optimizer [OPTIONS]
 
 Options:
   --java-app-path PATH        Path to Java Spring Boot application directory
@@ -106,13 +108,15 @@ Options:
 ### Examples
 
 **Basic optimization with default settings:**
+
 ```bash
-python main_optimizer.py --java-app-path .
+python -m python.main_optimizer --java-app-path .
 ```
 
 **Custom optimization parameters:**
+
 ```bash
-python main_optimizer.py \
+python -m python.main_optimizer \
   --java-app-path . \
   --population-size 50 \
   --generations 100 \
@@ -122,8 +126,9 @@ python main_optimizer.py \
 ```
 
 **Analysis only (on existing results):**
+
 ```bash
-python main_optimizer.py --analysis-only --results-file optimization_results.json
+python -m python.main_optimizer --analysis-only --results-file optimization_results.json
 ```
 
 ## Output
@@ -131,10 +136,12 @@ python main_optimizer.py --analysis-only --results-file optimization_results.jso
 The application generates several outputs:
 
 ### 1. Optimization Results
+
 - `optimization_results.json`: Complete optimization results
 - `optimization_YYYYMMDD_HHMMSS.log`: Detailed log file
 
 ### 2. Pareto Analysis
+
 - `pareto_analysis/analysis_summary.json`: Statistical summary
 - `pareto_analysis/pareto_solutions.csv`: Pareto optimal solutions
 - `pareto_analysis/pareto_2d_*.html`: 2D Pareto frontier plots
@@ -143,6 +150,7 @@ The application generates several outputs:
 - `pareto_analysis/parameter_distributions.html`: Parameter distribution plots
 
 ### 3. Visualizations
+
 - Interactive HTML plots (open in browser)
 - PNG images for reports
 - Comprehensive statistical analysis
@@ -161,16 +169,16 @@ The Java application provides these REST endpoints:
 
 The genetic algorithm operates within these parameter bounds:
 
-| Parameter | Min | Max |
-|-----------|-----|-----|
-| varOfWork | 1 | 5 |
-| capacityOfMainConveyor | 600 | 1400 |
-| quantityOfVagonsToSilageAtOnce | 6 | 12 |
-| quantityOfVehicleDischargeStations | 1 | 6 |
-| numberOfVehicleSilages | 1 | 6 |
-| capacityOfVehicleSilages | 600 | 1200 |
-| quantityOfSilages | 15 | 25 |
-| yearsModelWorking | 1 | 3 |
+| Parameter                          | Min | Max  |
+|------------------------------------|-----|------|
+| varOfWork                          | 1   | 5    |
+| capacityOfMainConveyor             | 600 | 1400 |
+| quantityOfVagonsToSilageAtOnce     | 6   | 12   |
+| quantityOfVehicleDischargeStations | 1   | 6    |
+| numberOfVehicleSilages             | 1   | 6    |
+| capacityOfVehicleSilages           | 600 | 1200 |
+| quantityOfSilages                  | 15  | 25   |
+| yearsModelWorking                  | 1   | 3    |
 
 ## KPIs Optimized
 
@@ -185,48 +193,49 @@ The genetic algorithm operates within these parameter bounds:
 ### Common Issues
 
 1. **Java application not starting**:
-   - Check Maven installation
-   - Verify AnyLogic libraries are installed
-   - Check port 8080 is available
+    - Check Maven installation
+    - Verify AnyLogic libraries are installed
+    - Check port 8080 is available
 
 2. **Simulation timeouts**:
-   - Increase `--timeout` parameter
-   - Check AnyLogic model complexity
-   - Verify system resources
+    - Increase `--timeout` parameter
+    - Check AnyLogic model complexity
+    - Verify system resources
 
 3. **Python dependencies**:
-   - Use virtual environment
-   - Update pip: `pip install --upgrade pip`
-   - Install dependencies individually if needed
+    - Use virtual environment
+    - Update pip: `pip install --upgrade pip`
+    - Install dependencies individually if needed
 
 4. **Memory issues**:
-   - Reduce population size
-   - Reduce number of generations
-   - Increase system memory
+    - Reduce population size
+    - Reduce number of generations
+    - Increase system memory
 
 ### Logging
 
 Enable debug logging for detailed information:
+
 ```bash
-python main_optimizer.py --log-level DEBUG
+python -m python.main_optimizer --log-level DEBUG
 ```
 
 ## Performance Tips
 
 1. **For faster optimization**:
-   - Reduce population size (20-30)
-   - Reduce generations (30-50)
-   - Use smaller parameter ranges
+    - Reduce population size (20-30)
+    - Reduce generations (30-50)
+    - Use smaller parameter ranges
 
 2. **For better results**:
-   - Increase population size (50-100)
-   - Increase generations (100-200)
-   - Run multiple times with different seeds
+    - Increase population size (50-100)
+    - Increase generations (100-200)
+    - Run multiple times with different seeds
 
 3. **For production use**:
-   - Use dedicated server for Java application
-   - Implement result caching
-   - Use database for result storage
+    - Use dedicated server for Java application
+    - Implement result caching
+    - Use database for result storage
 
 ## Contributing
 
@@ -243,6 +252,7 @@ This project is licensed under the MIT License.
 ## Support
 
 For issues and questions:
+
 1. Check the troubleshooting section
 2. Review logs for error messages
 3. Create an issue with detailed information
